@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -14,7 +15,9 @@ function Navbar() {
           <div className="navbar-item">
             <div className="field is-grouped">
               <p className="control">
-                <a href="/users/sign_in" className="navbar-item button is-black">Sign In</a>
+                <Link to={`/users/sign_in`} className="navbar-item button is-black">
+                  Sign In
+                </Link>
               </p>
               <p className="control">
                 <a href="/users/sign_up" className="navbar-item button is-black">Sign Up</a>
