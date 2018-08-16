@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar is-fixed-top is-black" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="/">
-          <h1 className="title is-5 has-text-white">BLOGeek</h1>
+          <Link to="/" className="title is-5 has-text-white">BLOGeek</Link>
         </a>
       </div>
 
@@ -15,12 +15,14 @@ function Navbar() {
           <div className="navbar-item">
             <div className="field is-grouped">
               <p className="control">
-                <Link to={`/users/sign_in`} className="navbar-item button is-black">
+                <Link to="/users/sign_in" className="navbar-item button is-black">
                   Sign In
                 </Link>
               </p>
               <p className="control">
-                <a href="/users/sign_up" className="navbar-item button is-black">Sign Up</a>
+                <Link to="/users/sign_up" className="navbar-item button is-black">
+                  Sign Up
+                </Link>
               </p>
             </div>
           </div>
