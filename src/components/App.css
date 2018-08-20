@@ -1,3 +1,8 @@
 .app > .section {
   min-height: calc(100vh - 52px);
 }
+
+/* Posts */
+.post:not(:first-child) {
+  margin-top: var(--spacing-large);
+}

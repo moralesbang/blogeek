@@ -1,9 +1,9 @@
 import React from 'react';
-import Form from './Form.js';
+import UserForm from './UserForm';
 
 function SignUp() {
   return(
-    <Form title="Sign Up"/>
+    <UserForm title="Sign Up"/>
   );
 }
 
