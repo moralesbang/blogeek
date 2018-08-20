@@ -10,20 +10,7 @@ function Navbar() {
 
       <div id="navbar" className="navbar-menu">
         <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="field is-grouped">
-              <p className="control">
-                <Link to="/users/sign_in" className="navbar-item button is-black">
-                  Sign In
-                </Link>
-              </p>
-              <p className="control">
-                <Link to="/users/sign_up" className="navbar-item button is-black">
-                  Sign Up
-                </Link>
-              </p>
-            </div>
-          </div>
+          <Link to='/posts/new' className="navbar-item">New Post</Link>
         </div>
       </div>
     </nav>
