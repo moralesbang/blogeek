@@ -9,7 +9,8 @@ class NewsFeed extends Component {
   }
 
   componentWillMount(){
-    axios.get('https://jsonplaceholder.typicode.com/posts').then( res => {
+    // URL for testing only
+    axios.get('https://jsonplaceholder.typicode.com/posts?userId=1').then( res => {
       const posts = res.data
       posts.forEach( post => {
         let data = {

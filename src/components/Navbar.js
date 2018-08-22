@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
   return (
     <nav className="navbar is-fixed-top is-black" aria-label="main navigation">
       <div className="navbar-brand">
@@ -10,7 +10,9 @@ function Navbar() {
 
       <div id="navbar" className="navbar-menu">
         <div className="navbar-end">
-          <Link to='/posts/new' className="navbar-item">New Post</Link>
+          <div className="navbar-item">
+            {props.children}
+          </div>
         </div>
       </div>
     </nav>
