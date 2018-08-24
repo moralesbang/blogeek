@@ -1,17 +1,23 @@
 import React from 'react'
+import axios from 'axios'
 
 class PostForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       title: '',
-      content: ""
+      content: "",
+      username: 'juan-camilo'
     }
   }
 
   handleSubmit = event => {
     event.preventDefault()
     console.log(this.state)
+    axios.post('http://192.168.193.4:3200/create_post', this.state)
+      .then( res =>
+        console.log(res.data)
+      )
   }
 
   handleChange = event => {
