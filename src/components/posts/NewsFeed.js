@@ -9,28 +9,20 @@ class NewsFeed extends Component {
   }
 
   componentWillMount(){
-    axios.get('https://jsonplaceholder.typicode.com/posts').then( res => {
-      const posts = res.data
-      posts.forEach( post => {
-        let data = {
-          id: post.id,
-          title: post.title,
-          content: post.body,
-          author: post.userId
-        }
-        this.setState({ posts: this.state.posts.concat([data]) })
-      })
+    axios.get('http://192.168.193.26:3200/posts').then( res => {
+      console.log(res.data)
+      this.setState({posts: res.data})
     })
   } 
 
   render() {
-    // console.log( this.state.posts.length )
     return(
       <div className="column is-10">
         { 
-          this.state.posts.map( post =>
-            <Post key={post.id} title={post.title} content={post.content} author={post.author}/>
-          )
+          this.state.posts.map( post => {
+            const props = { key: post._id, title: post.title, content: post.content, author: post.username };
+            return <Post {...props} />
+          })
         }
       </div>
     )

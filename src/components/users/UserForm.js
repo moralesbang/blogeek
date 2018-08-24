@@ -6,8 +6,9 @@ class UserForm extends React.Component {
     super(props);
 
     this.state = {
+      username: '',
       email: '',
-      password: ''
+      password: '',
     };
   }
 
@@ -17,17 +18,11 @@ class UserForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    
-    const user = {
-      email: this.state.email,
-      password: this.state.password
-    }
-
-    axios.post('https://jsonplaceholder.typicode.com/users', { user })
+    axios.post('http://localhost:3200/sign_up', this.state)
       .then(res => {
-        console.log(res)
-        console.log(res.data)
+        document.cookie = `authorization = ${res.data.token}`
       })
+
   }
 
   render() {
@@ -46,6 +41,21 @@ class UserForm extends React.Component {
 
               <span className="icon is-small is-left">
                 <i className="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Username</label>
+            <div className="control has-icons-left">
+              <input className="input"
+                type="text"
+                name="username"
+                placeholder="Username"
+                onChange={this.handleChange} />
+
+              <span className="icon is-small is-left">
+                <i className="fas fa-user"></i>
               </span>
             </div>
           </div>
