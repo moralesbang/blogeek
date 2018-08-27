@@ -3,7 +3,7 @@ import UserForm from './UserForm';
 
 function SignUp() {
   return(
-    <UserForm title="Sign Up"/>
+    <UserForm title="Sign Up" submitClass="is-success" />
   );
 }
 

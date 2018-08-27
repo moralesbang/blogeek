@@ -1,6 +1,6 @@
 @import '~bulma/css/bulma.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';
-@import 'functions.css';
+@import './functions.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 body {
