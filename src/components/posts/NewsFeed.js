@@ -27,7 +27,7 @@ class NewsFeed extends Component {
   render() {
     // console.log( this.state.posts.length )
     return(
-      <div className="column is-10">
+      <div className="column news-feed">
         { 
           this.state.posts.map( post =>
             <Post key={post.id} title={post.title} content={post.content} author={post.author}/>

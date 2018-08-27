@@ -10,3 +10,16 @@ body {
 input, select, textarea, button {
   font-family: inherit;
 }
+
+.news-feed {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 520px);
+  grid-gap: 2em;
+}
+
+@media screen and (max-width: 575px) {
+  .news-feed {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
