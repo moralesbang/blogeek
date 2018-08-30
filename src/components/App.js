@@ -24,6 +24,7 @@ class App extends Component {
             <div className="columns is-centered">
               <Switch>
                 <Route exact path="/" component={NewsFeed} />
+                <Route path="/news" component={NewsFeed} />
                 <Route path='/users/sign_in' component={SignIn}/>
                 <Route path='/users/sign_up' component={SignUp}/>
                 <Route path='/posts/new' component={PostForm}/>

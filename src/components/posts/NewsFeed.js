@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+import axios from 'axios'
 import Post from './Post'
 
 class NewsFeed extends Component {
@@ -8,9 +8,8 @@ class NewsFeed extends Component {
     this.state = { posts: [] }
   }
 
-  componentWillMount(){
-    axios.get('http://192.168.193.26:3200/posts').then( res => {
-      console.log(res.data)
+  componentWillMount() {
+    axios.get('http://localhost:3200/news').then( res => {
       this.setState({posts: res.data})
     })
   }
