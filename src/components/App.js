@@ -1,0 +1,42 @@
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import './App.css'
+import Navbar from './Navbar'
+import SignIn from './users/SignIn'
+import SignUp from './users/SignUp'
+import NewsFeed from './posts/NewsFeed'
+import PostForm from './posts/PostForm'
+import UserAuth from './users/UserAuthActions'
+import NewPost from './posts/NewPostButton'
+import Footer from './Footer'
+
+class App extends Component {
+  render() {
+    return (
+      <div className="app">
+        <Navbar>
+          {/* Asks which content show depending of user */}
+          {false ? <UserAuth /> : <NewPost />} 
+        </Navbar>
+
+        <section className="section">
+          <div className="container">
+            <div className="columns is-centered">
+              <Switch>
+                <Route exact path="/" component={NewsFeed} />
+                <Route path="/news" component={NewsFeed} />
+                <Route path='/users/sign_in' component={SignIn}/>
+                <Route path='/users/sign_up' component={SignUp}/>
+                <Route path='/posts/new' component={PostForm}/>
+              </Switch>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default App;
