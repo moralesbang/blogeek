@@ -1,0 +1,52 @@
+@import '~bulma/css/bulma.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import './functions.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+/* .news-feed {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 520px);
+  grid-gap: 2em;
+} */
+
+.news-feed > .post .level:not(:last-child) {
+  margin-bottom: 0 !important;
+}
+
+.news-feed > .post {
+  border-radius: 5px;
+}
+
+.has-centered-items {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.comments {
+  font-size: .9em;
+}
+
+.comments article.media {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(219, 219, 219, 0.5);
+}
+/* Media Queries */
+
+@media screen and (max-width: 575px) {
+  .news-feed {
+    grid-template-columns: repeat(1, 100%);
+  }
+}

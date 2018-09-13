@@ -1,0 +1,11 @@
+.comment-form {
+  margin-top: 1.5rem;
+}
+
+.comment-form .textarea {
+  padding: .35rem .5rem;
+}
+
+.comment-form .fa-pen-square {
+  font-size: 2.5rem
+}
